@@ -1,6 +1,7 @@
 {
   "name": "star-wars",
   "version": "0.0.0",
+  "description": "Practicing angular with star wars api",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
