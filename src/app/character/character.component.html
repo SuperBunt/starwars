@@ -8,16 +8,16 @@
         </li>
       </ul>
     </div>
-    <div *ngIf="selectedPerson" class='col-sm-8 bio-details'>
+    <div *ngIf="selectedPerson" class='col-sm-10 bio-details'>
       <h1> {{selectedPerson.name | uppercase}} </h1>
       <h3><span class="label label-default">Height</span> {{selectedPerson.height}}</h3>
       <h3><span class="label label-default">Weight</span> {{selectedPerson.mass}}</h3>
       <h3><span class="label label-default">Hair Colour</span> {{selectedPerson.hair_color}}</h3>
       <h3><span class="label label-default">Gender</span> {{selectedPerson.gender}}</h3>
       <h3><span class="label label-default">Birth year</span> {{selectedPerson.birth_year}}</h3>
-      <h3><span class="label label-default">Films</span></h3>
+      <h3><span class="label label-default">Appearances</span></h3>
       <ul *ngFor='let film of selectedPerson.films'>
-        <li>{{film}}</li>
+        <li (click)="goToFilm(film)">{{film}}</li>
       </ul>
 
     <!--<character-detail [hero]="selectedPerson"></character-detail>-->

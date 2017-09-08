@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from "@angular/router";
 import { Location }                 from '@angular/common';
 
-import { Character } from './character';
+import { Character } from '../character';
 import { SwapiService } from "app/swapi.service";
 
 @Component({

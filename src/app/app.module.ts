@@ -5,13 +5,16 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 // components
 import { AppComponent } from './app.component';
-import { CharacterComponent } from './character.component';
-import { CharacterDetailComponent } from './character-detail.component';
-//import { CharacterListComponent } from './character-list.component';
+import { CharacterComponent } from './character/character.component';
+import { CharacterDetailComponent } from './character/character-detail.component';
+import { FilmComponent } from './film/film.component';
+import { FilmDetailComponent } from './film/film-detail.component';
+import { FilmListComponent } from './film/film-list.component';
 import { NavbarComponent } from './navbar.component';
 import { WelcomeComponent } from './welcome.component';
 // services
 import { SwapiService } from './swapi.service';
+import { SwapiFilmService } from './swapiFilm.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { SwapiService } from './swapi.service';
     NavbarComponent,
     CharacterComponent,
     CharacterDetailComponent,
+    FilmComponent,
+    FilmDetailComponent,
+    FilmListComponent,
     WelcomeComponent
   ],
   imports: [
@@ -28,7 +34,8 @@ import { SwapiService } from './swapi.service';
     HttpModule
   ],
   providers: [
-    SwapiService
+    SwapiService,
+    SwapiFilmService
   ],
   bootstrap: [
     AppComponent,

@@ -1,6 +1,6 @@
-import { Person } from './person'
+import { Character } from './character'
 
-export const PEOPLE: Person[] = [
+export const PEOPLE: Character[] = [
     {
         "name": "Luke Skywalker",
         "height": "172",

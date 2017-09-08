@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { WelcomeComponent } from './welcome.component';
-import { CharacterComponent } from './character.component';
-// import { FilmComponent } from './films.component';
-import { CharacterDetailComponent } from './character-detail.component';
+import { CharacterComponent } from './character/character.component';
+import { FilmComponent } from './film/film.component';
+import { FilmDetailComponent } from './film/film-detail.component';
+import { CharacterDetailComponent } from './character/character-detail.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
@@ -20,11 +21,24 @@ const routes: Routes = [
             {
                 path: ':name',
                 component: CharacterDetailComponent,
-                data : {some_data : 'some value'}
+                data: { some_data: 'some value' }
+            }
+        ]
+    },
+    {
+        path: 'film',
+        children: [
+            {
+                path: '',
+                component: FilmComponent
+            },
+            {
+                path: ':id',
+                component: FilmDetailComponent,
+                data: { some_data: 'some value' }
             }
         ]
     }
-//   { path: 'films', component: FilmComponent }
 ];
 
 @NgModule({

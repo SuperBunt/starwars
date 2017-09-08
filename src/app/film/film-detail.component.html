@@ -1,0 +1,12 @@
+<div class='movie-box' >
+    <div class="fade"></div>
+    <section *ngIf='film' [class.star-wars]='isScrolling' (click)="toggleClass()">
+        <div class="crawl">
+            <div class="title">
+                <p>Episode: {{film.episode_id}}</p>
+                <h1>{{film.title}}</h1>
+            </div>
+            <p>{{film.opening_crawl}}</p>
+        </div>
+    </section>
+</div>
