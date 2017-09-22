@@ -10,8 +10,7 @@ import { Character } from '../character'
 @Component({
     selector: 'character',
     templateUrl: './character.component.html',
-    styleUrls: ['./character.component.css'],
-
+    styleUrls: ['./character.component.css']
 })
 export class CharacterComponent implements OnInit {
     selectedPerson: Character;

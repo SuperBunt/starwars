@@ -1,13 +1,21 @@
-<h1>Character Info</h1>
-<div *ngIf="hero" >
-  <h1> {{hero.name | uppercase}} </h1>
-  <h3><span class="label label-default">Height</span> {{hero.height}}</h3>  
-  <h3><span class="label label-default">Weight</span> {{hero.mass}}</h3> 
-  <h3><span class="label label-default">Hair Colour</span> {{hero.hair_colour}}</h3> 
-  <h3><span class="label label-default">Gender</span> {{hero.gender}}</h3> 
-  <h3><span class="label label-default">Birth year</span> {{hero.birth_year}}</h3> 
-  <h3><span class="label label-default">Films</span></h3> 
-  <ul *ngFor='let film of hero.films'>
-      <li>{{film}}</li>
-  </ul>
+<div *ngIf="hero" class='container'>
+  <div class='lightsabre container'>
+    <div class='handle'></div>
+    <div class='beam'><span>Luke Skywalker</span></div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h3><span class="label label-default">Height</span> {{hero.height}}</h3>
+      <h3><span class="label label-default">Weight</span> {{hero.mass}}</h3>
+      <h3><span class="label label-default">Hair Colour</span> {{hero.hair_colour}}</h3>
+      <h3><span class="label label-default">Gender</span> {{hero.gender}}</h3>
+      <h3><span class="label label-default">Birth year</span> {{hero.birth_year}}</h3>
+      <h3><span class="label label-default">Films</span></h3>
+      <ul *ngFor='let film of hero.films'>
+        <li>{{film}}</li>
+      </ul>
+    </div>
+    <div class='col-md-6'><img src=".\assets\luke_skywalker.jpg"></div>
+  </div>
+
 </div>

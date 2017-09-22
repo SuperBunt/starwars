@@ -19,6 +19,7 @@
     padding: .3em 0;
     height: 1.6em;
     border-radius: 4px;
+    border: 1px solid white;
   }
   .heroes li.selected:hover {
     background-color: #BBD8DC !important;
@@ -55,3 +56,69 @@
     color: yellow;
     padding: 5px;
   }
+
+  .lightsabre {
+	/*border: 2px dashed yellow;*/
+	align-items: center;
+	display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+	display: flex;
+	animation: swipe 1.3s forwards;
+	
+}
+
+.handle{	
+	height: 100px;
+	width: 200px;
+	background-image: url("../../assets/rsz_lightsaber-hilt.png");
+	background-repeat: no-repeat;
+    background-position: center; 
+	background-size: contain;
+}
+
+.handle img {	
+	border: dashed 2px red;
+}
+
+.beam {
+	height: 30px;
+	color:transparent;
+	background-color:transparent;
+	width: 0%;
+	animation: voom 1.8s forwards;
+	text-align: center;
+	font-size: 2.0em;
+}
+
+/*.handle:hover + .beam {
+	animation: voom 1.2s forwards; 
+}
+
+.lightsabre:hover {
+	animation: swipe 1.2s forwards;  
+}*/
+
+@keyframes swipe{
+	0%{ transform: rotate(-135deg); transform-origin: left;}
+}
+
+@keyframes voom {
+	0% { 
+		background-color:transparent; 
+		
+	 }
+	30% { width: 0%; background-color:green; color:transparent;}
+	100% { width: 100%; -webkit-box-sizing: content-box; 
+	  border: none;
+	  -webkit-border-radius: 0 2px 2px 0;
+	  border-radius: 0 5px 5px 0;
+	  color: white;
+	  text-align: center;
+	  -o-text-overflow: ellipsis;
+	  text-overflow: ellipsis;
+	  background: #eaf0f2;
+	  -webkit-box-shadow: 0 0 2px -3px rgba(31,226,57,0.95) , 0 0 15px 8px rgba(62,201,80,0.75) inset, 0 0 15px 8px rgba(62,201,80,0.75) ;
+	  box-shadow: 0 0 2px -3px rgba(31,226,57,0.95), 0 0 2px -3px rgba(31,226,57,0.95) inset , 0 0 15px 8px rgba(62,201,80,0.75) inset, 0 0 15px 8px rgba(62,201,80,0.75) ;
+	  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+	  }
+}

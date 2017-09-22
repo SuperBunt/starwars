@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-body {
+@font-face {
+    font-family: starwars;
+    src: url('star_jedi/starjedi/Starjedi.ttf');
+}
+
+body, html {
+    min-height: 100%;
     padding-top: 60px; /* This should be equal to the height of your navbar */
+    background-image: url("assets/galaxy_BG.jpg"); 
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
 }

@@ -7,7 +7,8 @@ import { SwapiService } from "app/swapi.service";
 
 @Component({
   selector: 'character-detail',
-  templateUrl: './character-detail.component.html'
+  templateUrl: './character-detail.component.html',
+  styleUrls: ['./character.component.css']
 })
 
 export class CharacterDetailComponent {
